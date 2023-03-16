@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Profile - Sporty App
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">Age: 30</p>
+                    <p class="card-text">Location: New York, NY</p>
+                    <a href="#" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget magna sed turpis fringilla elementum.</p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">My Trainings</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Training 1</li>
+                        <li class="list-group-item">Training 2</li>
+                        <li class="list-group-item">Training 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
