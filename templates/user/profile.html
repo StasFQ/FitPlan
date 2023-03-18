@@ -9,10 +9,11 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">John Doe</h5>
-                    <p class="card-text">Age: 30</p>
+                    <h5 class="card-title">{{ user.username }}</h5>
+                    <p class="card-text">{{ user.age }}</p>
                     <p class="card-text">Location: New York, NY</p>
-                    <a href="#" class="btn btn-primary">Edit Profile</a>
+                    <a href="{% url 'CreateTraining' %}">Add Training</a>
+                    <p><a href="{% url 'UpdateProfile' user.id %}" class="btn btn-primary">Edit Profile</a></p>
                 </div>
             </div>
         </div>
@@ -27,9 +28,9 @@
                 <div class="card-body">
                     <h5 class="card-title">My Trainings</h5>
                     <ul class="list-group">
-                        <li class="list-group-item">Training 1</li>
-                        <li class="list-group-item">Training 2</li>
-                        <li class="list-group-item">Training 3</li>
+                        {% for i in workouts %}
+                            <p>{{ i }}</p>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

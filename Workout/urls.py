@@ -8,4 +8,6 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('trainings/', trainings, name='trainings'),
     path('trainers/', trainers, name='trainers'),
+    path('add_train/', CreateTraining.as_view(), name='CreateTraining'),
+    path('contact/', contact, name='contact')
 ]

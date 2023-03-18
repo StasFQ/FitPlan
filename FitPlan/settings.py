@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user',
+    'Workout',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -118,7 +121,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+LOGIN_REDIRECT_URL = "/user/"
+LOGIN_URL = '/register/login'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
