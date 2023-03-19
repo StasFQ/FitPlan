@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'Workout',
-    'authentication'
+    'authentication',
+    'weather'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,6 @@ CELERY_TIMEZONE = TIME_ZONE
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+OPENWEATHERMAP_API_KEY = '55f4e4cea012be98116ee8444789ef6e'

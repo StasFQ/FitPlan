@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container mt-4 rounded p-4" style="background-color: #007bff; color: #ffffff;">
+    <h1>Weather in {{ weather.name }}</h1>
+    <p>Current temperature: {{ weather.main.temp }}°C</p>
+    <p>Feels like: {{ weather.main.feels_like }}°C</p>
+    <p>Description: {{ weather.weather.0.description }}</p>
+</div>
+{% endblock %}
